@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+//Name of all componenets should start with capital letters
+const sayhello=()=>{
+  return <p>You clickd the button</p>
+}
+const Header = () => {
+  return <h1>Click the button</h1>;
+};
+const Button = () => {
+  return <button onClick={sayhello}>Click me!</button>;
+};
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header/>
+      <Button />
     </div>
   );
-}
+};
+//Component is a javascript function that return HTML or XML
+//A component can only return one tag at a time
 
 export default App;
